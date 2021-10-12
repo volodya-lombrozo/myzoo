@@ -18,6 +18,7 @@ services:
 
   myzookeeper:
     image: zookeeper
+    container_name: myzookeeper
     restart: always
     hostname: zoo1
     ports:
