@@ -2,12 +2,18 @@ version: '3.8'
 
 services:
 
+
   springbased:
     build:
       context: ./spring_based
     ports:
       - "8081:8080"
 
+  micronautbased:
+    build:
+      context: ./simple_server
+    ports:
+      - "8082:8080"
 
   myzookeeper:
     image: zookeeper

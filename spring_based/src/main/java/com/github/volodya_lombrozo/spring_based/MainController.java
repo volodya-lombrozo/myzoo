@@ -10,7 +10,7 @@ public class MainController {
 
     private final long id = Math.abs(new Random().nextLong());
 
-    @GetMapping
+    @GetMapping(produces = "text/plain")
     public String welcome() {
         return String.format("Welcome to Spring Based Application%n" +
                 "This is a server application%n" +
