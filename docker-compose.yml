@@ -12,6 +12,7 @@ services:
   micronautbased:
     build:
       context: ./simple_server
+    container_name: micro
     ports:
       - "8082:8080"
 
