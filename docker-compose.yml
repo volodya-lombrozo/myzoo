@@ -5,16 +5,24 @@ services:
 
   springbased:
     build:
-      context: ./spring_based
+      context: ./spring
+    container_name: spring
     ports:
       - "8081:8080"
 
-  micronautbased:
+  micronautbased_first:
     build:
-      context: ./simple_server
-    container_name: micro
+      context: ./micronaut
+    container_name: micro1
     ports:
       - "8082:8080"
+
+  micronautbased_second:
+    build:
+      context: ./micronaut
+    container_name: micro2
+    ports:
+      - "8083:8080"
 
   myzookeeper:
     image: zookeeper
